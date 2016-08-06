@@ -30,6 +30,7 @@ public class RandomizedSet {
             list.set(listEnd,val);
         }
         listEnd++;
+        System.out.println(list.toString());
         return true;
     }
 
@@ -49,5 +50,17 @@ public class RandomizedSet {
         Random engine = new Random();
         int index = engine.nextInt(listEnd);
         return list.get(index);
+    }
+
+    public static void main(String[] args) {
+        RandomizedSet randomizedSet = new RandomizedSet();
+        randomizedSet.insert(6);
+        randomizedSet.insert(5);
+        randomizedSet.insert(4);
+        randomizedSet.remove(6);
+        randomizedSet.insert(3);
+        randomizedSet.insert(2);
+        randomizedSet.insert(1);
+        System.out.println(randomizedSet.getRandom());
     }
 }
